@@ -60,21 +60,21 @@ sudo make runtest
 
 # Errors with Caffe
 
-###### Check failed: error == cudaSuccess (30 vs. 0)
+##### Check failed: error == cudaSuccess (30 vs. 0)
 Use sudo once.
 
-###### Check failed: error == cudaSuccess (8 vs. 0)  invalid device function
+##### Check failed: error == cudaSuccess (8 vs. 0)  invalid device function
 Bug
 
-###### error == cudaSuccess (38 vs. 0)  no CUDA-capable device is detected
+##### error == cudaSuccess (38 vs. 0)  no CUDA-capable device is detected
 I just rebooted the computer.
 
-###### fatal error: boost/shared_ptr.hpp: No such file or directory
+##### fatal error: boost/shared_ptr.hpp: No such file or directory
 Execute the following:
 
 	sudo apt-get install libboost-all-dev
 
-###### fatal error: hdf5.h: No such file or directory
+##### fatal error: hdf5.h: No such file or directory
 Error with hdf5, I used the following to solve the error:
 
 ```
@@ -83,7 +83,7 @@ Modificar INCLUDE_DIRS añadiendo al final /usr/include/hdf5/serial/
 INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/local/include /usr/include/hdf5/serial/
 ```
 
-###### fatal error: numpy/arrayobject.h: No such file or directory
+##### fatal error: numpy/arrayobject.h: No such file or directory
 Error from numpy library, I used the following to solve the error:
 
 ```
@@ -92,7 +92,7 @@ make clean
 make pycaffe
 ```
 
-###### caffe.ph.h not found
+##### caffe.ph.h not found
 
 From the caffe root:
 
@@ -102,13 +102,13 @@ mkdir include/caffe/proto
 mv src/caffe/proto/caffe.pb.h include/caffe/proto
 ```
 
-###### undefined reference to boost::system::system_category()
+##### undefined reference to boost::system::system_category()
 This error appears when I use Caffe with Eclipse. Solved by including boost_system:
 
 	Eclipse: Project > Properties > C/C++ Build > Settings > Linker > Libraries: añadir boost_system a -l
 
 
-###### undefined reference to `google::LogMessage
+##### undefined reference to `google::LogMessage
 This error appears when I use Caffe with Eclipse. Solved by including glog:
 
 	Eclipse: Project > Properties > C/C++ Build > Settings > Linker > Libraries: añadir glog a -l
